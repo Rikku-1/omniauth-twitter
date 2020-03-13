@@ -4,6 +4,8 @@ require 'json'
 module OmniAuth
   module Strategies
     class Twitter < OmniAuth::Strategies::OAuth
+      attr_accessor :access_token
+
       option :name, 'twitter'
 
       option :client_options, {:authorize_path => '/oauth/authenticate',
